@@ -2,9 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class SmoothHealthSliderBar : HealthBar
+public class SmoothHealthSliderBar : HealthSliderBar
 {
-    [SerializeField] private Slider _slider;
     [SerializeField] private float _fillingSpeed;
 
     private Coroutine _coroutine;
@@ -38,7 +37,7 @@ public class SmoothHealthSliderBar : HealthBar
         while (_slider.value != value)
         {
             _slider.value = Mathf.MoveTowards(_slider.value, value, _fillingSpeed * Time.deltaTime);
-            
+
             yield return null;
         }
     }

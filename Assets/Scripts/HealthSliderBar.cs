@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HealthSliderBar : HealthBar
 {
-    [SerializeField] private Slider _slider;
+    [SerializeField] private protected Slider _slider;
     [SerializeField] private RectTransform _targetCanvas;
     [SerializeField] private Transform _followedObject;
 
